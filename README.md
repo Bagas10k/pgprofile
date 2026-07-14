@@ -104,6 +104,78 @@ Jika Anda ingin melakukan pengembangan atau modifikasi di komputer lokal:
 
 ---
 
+## 🌐 Setup Tunneling (Untuk Server Tanpa IP Publik)
+
+Jika server Anda berjalan di local network (localhost / server rumah / internal VPS) dan tidak memiliki IP Publik, Anda dapat menggunakan layanan **Tunneling** untuk mengekspos website Anda ke internet secara aman dan gratis.
+
+Ada 3 metode utama yang bisa Anda gunakan:
+
+### A. Menggunakan Cloudflare Tunnel (Sangat Direkomendasikan untuk Produksi)
+Cloudflare Tunnel (dulu bernama Argo Tunnel) 100% gratis, aman, dan dapat dihubungkan langsung ke **domain kustom** Anda sendiri (misal: `jajandigital.web.id`) tanpa membuka port server Anda ke internet.
+
+**Langkah-langkah setup:**
+1. Daftarkan domain Anda di Cloudflare (gratis).
+2. Install utility `cloudflared` di server Anda:
+   - Linux (Ubuntu/Debian):
+     ```bash
+     curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+     sudo dpkg -i cloudflared.deb
+     ```
+3. Login ke akun Cloudflare Anda melalui terminal server:
+   ```bash
+   cloudflared tunnel login
+   ```
+4. Buat tunnel baru (misal diberi nama `jajan-tunnel`):
+   ```bash
+   cloudflared tunnel create jajan-tunnel
+   ```
+5. Hubungkan tunnel ke subdomain/domain Anda:
+   ```bash
+   # Ganti subdomain dengan domain kustom Anda
+   cloudflared tunnel route dns jajan-tunnel jajandigital.web.id
+   ```
+6. Jalankan tunnel dan arahkan ke local port server Anda (misal Nginx berjalan di port `80` atau python server di `8080`):
+   ```bash
+   # Jika menggunakan Nginx lokal
+   cloudflared tunnel run --url http://localhost:80 jajan-tunnel
+   ```
+   *Sekarang domain Anda sudah terhubung secara aman langsung ke server lokal Anda!*
+
+---
+
+### B. Menggunakan Ngrok (Paling Cepat untuk Testing)
+Ngrok adalah cara tercepat untuk mengekspos localhost Anda ke internet dengan satu perintah.
+
+**Langkah-langkah setup:**
+1. Daftar akun gratis di [ngrok.com](https://ngrok.com).
+2. Download dan install Ngrok di server Anda.
+3. Hubungkan akun Anda menggunakan token otentikasi (copy dari dashboard ngrok):
+   ```bash
+   ngrok config add-authtoken <TOKEN_ANDA>
+   ```
+4. Jalankan local web server Anda (misalnya python server di port `8080`):
+   ```bash
+   python -m http.server 8080
+   ```
+5. Buka terminal baru dan jalankan ngrok ke port tersebut:
+   ```bash
+   ngrok http 8080
+   ```
+6. Ngrok akan memberikan URL publik gratis (misal: `https://abcd-1234.ngrok-free.app`) yang bisa diakses oleh siapapun dari internet.
+
+---
+
+### C. Menggunakan Pinggy (Paling Simple, Tanpa Install Aplikasi)
+Jika Anda tidak ingin menginstall aplikasi tambahan apa pun di server Anda, Anda bisa memanfaatkan SSH Tunneling bawaan sistem operasi menggunakan layanan **Pinggy**.
+
+Cukup jalankan satu perintah SSH berikut di server Anda (arahkan port ke port local server Anda, misal port `8080`):
+```bash
+ssh -R 80:localhost:8080 loop.pinggy.io
+```
+Pinggy akan langsung menampilkan URL publik HTTP & HTTPS sementara di layar terminal Anda secara gratis.
+
+---
+
 ## 🛠️ Fitur Utama Website
 - **3D Card Hover**: Efek miring halus ketika cursor diarahkan ke kartu penawaran.
 - **Mouse Tracker Blob**: Gradient cahaya yang bergerak mulus mengikuti cursor di background.
