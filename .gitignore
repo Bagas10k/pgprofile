@@ -1,0 +1,8 @@
+# Windows thumbnail cache
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+# Folder config files
+Desktop.ini
+.DS_Store

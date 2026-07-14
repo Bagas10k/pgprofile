@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jajan Digital - Penyedia layanan lisensi dan akun aplikasi premium legal terpercaya di Indonesia. Aplikasi premium murah, legal, dan bergaransi.">
+  <title>Jajan Digital | Aplikasi Premium Murah, Legal & Bergaransi</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- BACKGROUND GLOWS (Google AI-like) -->
+  <div class="background-glow-container">
+    <div class="static-orb static-orb-1"></div>
+    <div class="static-orb static-orb-2"></div>
+    <div class="static-orb static-orb-3"></div>
+    <div class="interactive-glow-blob" id="interactiveBlob"></div>
+  </div>
+
+  <!-- HEADER / NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px;">
+          <path d="M 46,12 L 64,12 L 47,61 C 44,71 35,77 25,77 C 15,77 6,71 6,60 L 22,60 C 22,64 25,66 28,66 C 32,66 34,63 35,57 L 46,12 Z" fill="currentColor"/>
+          <path d="M 61,24 L 79,24 L 62,73 C 59,83 50,89 40,89 C 30,89 21,83 21,72 L 37,72 C 37,76 40,78 43,78 C 47,78 49,75 50,69 L 61,24 Z" fill="currentColor"/>
+        </svg>
+      </div>
+      <span>Jajan<span class="gradient-text-alt">Digital</span></span>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#" class="nav-link">Home</a></li>
+      <li><a href="#tentang" class="nav-link">Tentang Kami</a></li>
+      <li><a href="#layanan" class="nav-link">Pilar Layanan</a></li>
+      <li><a href="#kalkulator" class="nav-link">Simulasi Hemat</a></li>
+      <li><a href="#keunggulan" class="nav-link">Keunggulan</a></li>
+      <li><a href="#kontak" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem;">Hubungi Kami</a></li>
+      <li>
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+          <i data-lucide="moon" class="theme-icon-moon"></i>
+          <i data-lucide="sun" class="theme-icon-sun"></i>
+        </button>
+      </li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero-section container">
+    <div class="hero-grid">
+      <div class="hero-content reveal">
+        <div class="section-tag">
+          <span class="dot"></span>
+          <span>Aplikasi Premium Murah, Legal, & Bergaransi</span>
+        </div>
+        <h1 class="hero-headline">
+          Solusi Kebutuhan Digital Anda, <span class="gradient-text">Lebih Hemat</span> dan Terpercaya.
+        </h1>
+        <p class="hero-subheadline">
+          Jajan Digital adalah penyedia layanan lisensi dan akun aplikasi premium legal terpercaya di Indonesia. Kami hadir untuk memberikan akses penuh ke berbagai platform global demi mendukung produktivitas, kreativitas, dan hiburan harian Anda.
+        </p>
+        <div class="hero-ctas">
+          <a href="#kontak" class="btn btn-primary">
+            <i data-lucide="shopping-cart"></i> Mulai Berlangganan
+          </a>
+          <a href="#kalkulator" class="btn btn-secondary">
+            <i data-lucide="calculator"></i> Hitung Hemat Anda
+          </a>
+        </div>
+        <div class="hero-trust-badges">
+          <div class="badge-item">
+            <div class="badge-icon"><i data-lucide="shield-check"></i></div>
+            <div class="badge-text">
+              <h4>100% Legal & Aman</h4>
+              <p>Metode resmi invite & premium sah</p>
+            </div>
+          </div>
+          <div class="badge-item">
+            <div class="badge-icon"><i data-lucide="refresh-cw"></i></div>
+            <div class="badge-text">
+              <h4>Garansi Penuh</h4>
+              <p>Perlindungan durasi penuh aktif</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual reveal reveal-delay-2">
+        <div class="hero-img-wrapper">
+          <img src="assets/hero_workspace.png" alt="Jajan Digital Workspace" class="hero-img">
+        </div>
+        <!-- Decorative floating cards -->
+        <div class="floating-element float-1">
+          <div class="float-icon"><i data-lucide="zap"></i></div>
+          <span class="float-text">Aktivasi Instan</span>
+        </div>
+        <div class="floating-element float-2">
+          <div class="float-icon"><i data-lucide="bot"></i></div>
+          <span class="float-text">24/7 AI Respon</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- APP SHOWCASE MARQUEE -->
+  <section class="marquee-section">
+    <h3 class="marquee-title">Platform Premium Yang Tersedia</h3>
+    <div class="marquee-wrapper">
+      <div class="marquee-content">
+        <!-- Netflix -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(229, 9, 20, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#e50914"><path d="M5.59 2v20h3.33V12.18L15.08 22h3.33V2h-3.33v9.82L8.92 2H5.59z"/></svg>
+          </div>
+          <span class="app-name">Netflix</span>
+        </div>
+        <!-- Spotify -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(29, 185, 84, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#1db954"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.892-.982-.336.076-.67-.135-.747-.472-.077-.336.136-.67.472-.747 3.852-.88 7.15-.504 9.822 1.13.295.18.387.563.205.864zm1.225-2.72c-.227.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.077-1.182-.413.125-.85-.107-.975-.52-.125-.413.107-.85.52-.975 3.67-1.114 8.24-.57 11.347 1.34.367.226.487.707.26 1.076zm.106-2.833c-.273.447-.857.595-1.303.32-3.187-1.89-8.435-2.064-11.47-1.144-.505.153-1.037-.135-1.19-.64-.153-.505.135-1.037.64-1.19 3.612-1.097 9.404-.9 13.06 1.27.447.267.595.85.32 1.303z"/></svg>
+          </div>
+          <span class="app-name">Spotify</span>
+        </div>
+        <!-- Canva -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(139, 92, 246, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#8b5cf6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.65 0 3 1.35 3 3v2.68c0 .87.58 1.62 1.42 1.83.21.05.34.28.28.49l-.8 2.39z"/></svg>
+          </div>
+          <span class="app-name">Canva Pro</span>
+        </div>
+        <!-- CapCut -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(6, 182, 212, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#06b6d4"><path d="M12 2L2 12l10 10 10-10L12 2zm-1 5.4v9.2l-4.6-4.6 4.6-4.6zm2 0l4.6 4.6-4.6 4.6V7.4z"/></svg>
+          </div>
+          <span class="app-name">CapCut Pro</span>
+        </div>
+        <!-- ChatGPT -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(16, 185, 129, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#10b981"><path d="M21.74 11.23a4.74 4.74 0 0 0-.25-2.61A4.75 4.75 0 0 0 18 5.76a4.74 4.74 0 0 0-4.38-2.58A4.77 4.77 0 0 0 9.24 4.7a4.74 4.74 0 0 0-3.66.42A4.75 4.75 0 0 0 3.2 8.78a4.74 4.74 0 0 0-.25 2.61A4.75 4.75 0 0 0 6 18.24a4.74 4.74 0 0 0 4.38 2.58 4.77 4.77 0 0 0 4.38-1.52 4.74 4.74 0 0 0 3.66-.42 4.75 4.75 0 0 0 2.38-3.6 4.74 4.74 0 0 0 .94-4.05zm-7.61 7.15c-.24 0-.47-.07-.66-.21l-3-1.74a.8.8 0 0 1-.4-.7v-3.48l3 1.73a.8.8 0 0 1 .4.7V18a.8.8 0 0 1-.34.38zm-4.71-.85a.8.8 0 0 1-.39-.1l-3-1.73a.8.8 0 0 1-.4-.69v-3.47l3 1.73c.22.13.38.34.46.59v3.48a.79.79 0 0 1-.67.19zm-3.15-5.91a.8.8 0 0 1-.06-.8l1.73-3a.8.8 0 0 1 .7-.4h3.46l-1.73 3a.8.8 0 0 1-.7.4H6.27zm4.72-2.73l-1.73-3a.8.8 0 0 1 0-.8l1.73-3a.8.8 0 0 1 .7-.4h3.48l-1.73 3a.8.8 0 0 1 0 .8l1.73 3a.8.8 0 0 1-.7.4H11zm5.91 3.15a.8.8 0 0 1 .4-.7l3-1.73a.8.8 0 0 1 .8 0l3 1.73a.8.8 0 0 1 0 .8l-3 1.73a.8.8 0 0 1-.8 0l-3-1.73zm-.85 4.71a.8.8 0 0 1-.4-.7v-3.46l3-1.73a.8.8 0 0 1 .8 0l3 1.73a.8.8 0 0 1 .4.7v3.46l-3-1.73a.8.8 0 0 1-.8 0l-3 1.73z"/></svg>
+          </div>
+          <span class="app-name">ChatGPT Plus</span>
+        </div>
+        <!-- YouTube -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(255, 0, 0, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#ff0000"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.107C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.388.511a3.003 3.003 0 0 0-2.11 2.107C0 8.053 0 12 0 12s0 3.947.502 5.837a3.003 3.003 0 0 0 2.11 2.107c1.883.511 9.388.511 9.388.511s7.505 0 9.388-.511a3.003 3.003 0 0 0 2.11-2.107c.502-1.89.502-5.837.502-5.837s0-3.947-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </div>
+          <span class="app-name">YouTube Premium</span>
+        </div>
+        <!-- Office 365 -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(235, 60, 0, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#eb3c00"><path d="M2.25 3.75L10.5 2.25v19.5L2.25 20.25V3.75zm9.75-.75L21.75 5.25v13.5L12 21V3z"/></svg>
+          </div>
+          <span class="app-name">Office 365</span>
+        </div>
+        <!-- Midjourney -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(99, 102, 241, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#6366f1"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm-1-6.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5zm0-5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5z"/></svg>
+          </div>
+          <span class="app-name">Midjourney</span>
+        </div>
+        <!-- Zoom -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(45, 140, 255, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#2d8cff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 13.5c0 .83-.67 1.5-1.5 1.5h-7C7.67 17 7 16.33 7 15.5v-7C7 7.67 7.67 7 8.5 7h7c.83 0 1.5.67 1.5 1.5v7zM14 9h-4v4h4V9z"/></svg>
+          </div>
+          <span class="app-name">Zoom Pro</span>
+        </div>
+      </div>
+
+      <!-- Repeated for infinite effect -->
+      <div class="marquee-content" aria-hidden="true">
+        <!-- Netflix -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(229, 9, 20, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#e50914"><path d="M5.59 2v20h3.33V12.18L15.08 22h3.33V2h-3.33v9.82L8.92 2H5.59z"/></svg>
+          </div>
+          <span class="app-name">Netflix</span>
+        </div>
+        <!-- Spotify -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(29, 185, 84, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#1db954"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.892-.982-.336.076-.67-.135-.747-.472-.077-.336.136-.67.472-.747 3.852-.88 7.15-.504 9.822 1.13.295.18.387.563.205.864zm1.225-2.72c-.227.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.077-1.182-.413.125-.85-.107-.975-.52-.125-.413.107-.85.52-.975 3.67-1.114 8.24-.57 11.347 1.34.367.226.487.707.26 1.076zm.106-2.833c-.273.447-.857.595-1.303.32-3.187-1.89-8.435-2.064-11.47-1.144-.505.153-1.037-.135-1.19-.64-.153-.505.135-1.037.64-1.19 3.612-1.097 9.404-.9 13.06 1.27.447.267.595.85.32 1.303z"/></svg>
+          </div>
+          <span class="app-name">Spotify</span>
+        </div>
+        <!-- Canva -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(139, 92, 246, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#8b5cf6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.65 0 3 1.35 3 3v2.68c0 .87.58 1.62 1.42 1.83.21.05.34.28.28.49l-.8 2.39z"/></svg>
+          </div>
+          <span class="app-name">Canva Pro</span>
+        </div>
+        <!-- CapCut -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(6, 182, 212, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#06b6d4"><path d="M12 2L2 12l10 10 10-10L12 2zm-1 5.4v9.2l-4.6-4.6 4.6-4.6zm2 0l4.6 4.6-4.6 4.6V7.4z"/></svg>
+          </div>
+          <span class="app-name">CapCut Pro</span>
+        </div>
+        <!-- ChatGPT -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(16, 185, 129, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#10b981"><path d="M21.74 11.23a4.74 4.74 0 0 0-.25-2.61A4.75 4.75 0 0 0 18 5.76a4.74 4.74 0 0 0-4.38-2.58A4.77 4.77 0 0 0 9.24 4.7a4.74 4.74 0 0 0-3.66.42A4.75 4.75 0 0 0 3.2 8.78a4.74 4.74 0 0 0-.25 2.61A4.75 4.75 0 0 0 6 18.24a4.74 4.74 0 0 0 4.38 2.58 4.77 4.77 0 0 0 4.38-1.52 4.74 4.74 0 0 0 3.66-.42 4.75 4.75 0 0 0 2.38-3.6 4.74 4.74 0 0 0 .94-4.05zm-7.61 7.15c-.24 0-.47-.07-.66-.21l-3-1.74a.8.8 0 0 1-.4-.7v-3.48l3 1.73a.8.8 0 0 1 .4.7V18a.8.8 0 0 1-.34.38zm-4.71-.85a.8.8 0 0 1-.39-.1l-3-1.73a.8.8 0 0 1-.4-.69v-3.47l3 1.73c.22.13.38.34.46.59v3.48a.79.79 0 0 1-.67.19zm-3.15-5.91a.8.8 0 0 1-.06-.8l1.73-3a.8.8 0 0 1 .7-.4h3.46l-1.73 3a.8.8 0 0 1-.7.4H6.27zm4.72-2.73l-1.73-3a.8.8 0 0 1 0-.8l1.73-3a.8.8 0 0 1 .7-.4h3.48l-1.73 3a.8.8 0 0 1 0 .8l1.73 3a.8.8 0 0 1-.7.4H11zm5.91 3.15a.8.8 0 0 1 .4-.7l3-1.73a.8.8 0 0 1 .8 0l3 1.73a.8.8 0 0 1 0 .8l-3 1.73a.8.8 0 0 1-.8 0l-3-1.73zm-.85 4.71a.8.8 0 0 1-.4-.7v-3.46l3-1.73a.8.8 0 0 1 .8 0l3 1.73a.8.8 0 0 1 .4.7v3.46l-3-1.73a.8.8 0 0 1-.8 0l-3 1.73z"/></svg>
+          </div>
+          <span class="app-name">ChatGPT Plus</span>
+        </div>
+        <!-- YouTube -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(255, 0, 0, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#ff0000"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.107C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.388.511a3.003 3.003 0 0 0-2.11 2.107C0 8.053 0 12 0 12s0 3.947.502 5.837a3.003 3.003 0 0 0 2.11 2.107c1.883.511 9.388.511 9.388.511s7.505 0 9.388-.511a3.003 3.003 0 0 0 2.11-2.107c.502-1.89.502-5.837.502-5.837s0-3.947-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </div>
+          <span class="app-name">YouTube Premium</span>
+        </div>
+        <!-- Office 365 -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(235, 60, 0, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#eb3c00"><path d="M2.25 3.75L10.5 2.25v19.5L2.25 20.25V3.75zm9.75-.75L21.75 5.25v13.5L12 21V3z"/></svg>
+          </div>
+          <span class="app-name">Office 365</span>
+        </div>
+        <!-- Midjourney -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(99, 102, 241, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#6366f1"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm-1-6.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5zm0-5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5z"/></svg>
+          </div>
+          <span class="app-name">Midjourney</span>
+        </div>
+        <!-- Zoom -->
+        <div class="marquee-item">
+          <div class="app-icon-wrapper" style="background: rgba(45, 140, 255, 0.15);">
+            <svg viewBox="0 0 24 24" fill="#2d8cff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 13.5c0 .83-.67 1.5-1.5 1.5h-7C7.67 17 7 16.33 7 15.5v-7C7 7.67 7.67 7 8.5 7h7c.83 0 1.5.67 1.5 1.5v7zM14 9h-4v4h4V9z"/></svg>
+          </div>
+          <span class="app-name">Zoom Pro</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TENTANG KAMI -->
+  <section class="about-section container" id="tentang">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-img-wrapper">
+          <img src="assets/trust_team.png" alt="Tim Support Jajan Digital" class="about-img">
+          <div class="about-stats">
+            <span class="stat-num" id="statNum">10K+</span>
+            <span class="stat-text">Pengguna Aktif<br>Terlayani</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-content reveal reveal-delay-2">
+        <div class="section-tag">
+          <span class="dot"></span>
+          <span>Tentang Jajan Digital</span>
+        </div>
+        <h2 class="about-title">Akses Teknologi Dunia, Kini Lebih Terjangkau</h2>
+        <p class="about-desc">
+          Di era modern, akses terhadap teknologi dan hiburan digital berkualitas telah menjadi kebutuhan pokok. Jajan Digital hadir sebagai jembatan yang mempermudah pelajar, mahasiswa, konten kreator, hingga profesional untuk menikmati fitur-fitur premium dari berbagai aplikasi dunia.
+        </p>
+        <p class="about-desc" style="margin-top: -15px;">
+          Kami berkomitmen menyediakan layanan yang tidak hanya terjangkau, tetapi juga aman, resmi, dan memberikan ketenangan pikiran bagi setiap pengguna melalui sistem garansi penuh yang terproteksi.
+        </p>
+        <a href="#kalkulator" class="btn btn-secondary">
+          <i data-lucide="check-circle-2"></i> Lihat Solusi Kami
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILAR LAYANAN -->
+  <section class="services-section container" id="layanan">
+    <div class="section-header reveal">
+      <div class="section-tag">
+        <span class="dot"></span>
+        <span>Pilar Layanan Kami</span>
+      </div>
+      <h2 class="section-title">Kategori Solusi Digital</h2>
+      <p class="section-subtitle">Aktivitas produktif dan hiburan harian Anda didukung penuh dengan opsi lisensi premium terpilih.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Media Streaming -->
+      <div class="service-card glass-card reveal">
+        <div class="service-icon-box">
+          <i data-lucide="tv-2"></i>
+        </div>
+        <h3 class="service-card-title">Media Hiburan & Streaming</h3>
+        <p class="service-card-desc">Akses tanpa batas ke platform musik, film, hiburan drama, hingga tayangan olahraga favorit tanpa gangguan iklan.</p>
+      </div>
+
+      <!-- Kreativitas & Desain -->
+      <div class="service-card glass-card icon-cyan reveal reveal-delay-1">
+        <div class="service-icon-box">
+          <i data-lucide="palette"></i>
+        </div>
+        <h3 class="service-card-title">Kreativitas & Desain Digital</h3>
+        <p class="service-card-desc">Dukungan penuh untuk kreator visual melalui lisensi alat penyuntingan video dan desain grafis profesional.</p>
+      </div>
+
+      <!-- AI -->
+      <div class="service-card glass-card icon-indigo reveal reveal-delay-2">
+        <div class="service-icon-box">
+          <i data-lucide="brain-circuit"></i>
+        </div>
+        <h3 class="service-card-title">Akselerasi Teknologi AI</h3>
+        <p class="service-card-desc">Penyediaan akses ke asisten kecerdasan buatan (Artificial Intelligence) mutakhir untuk membantu efisiensi tugas, riset, koding, dan kepenulisan.</p>
+      </div>
+
+      <!-- Produktivitas -->
+      <div class="service-card glass-card icon-success reveal reveal-delay-3">
+        <div class="service-icon-box">
+          <i data-lucide="briefcase"></i>
+        </div>
+        <h3 class="service-card-title">Produktivitas & Konektivitas</h3>
+        <p class="service-card-desc">Fasilitas ruang rapat virtual tanpa batas durasi untuk kelancaran koordinasi bisnis, webinar, maupun kelas online.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAVINGS CALCULATOR (Interactive & Dynamic) -->
+  <section class="calculator-section container" id="kalkulator">
+    <div class="section-header reveal">
+      <div class="section-tag">
+        <span class="dot"></span>
+        <span>Simulasi Penghematan</span>
+      </div>
+      <h2 class="section-title">Berapa Banyak Anda Bisa Berhemat?</h2>
+      <p class="section-subtitle">Pilih aplikasi favorit Anda dan lihat efisiensi pengeluaran bulanan yang bisa Anda capai.</p>
+    </div>
+
+    <div class="calculator-container glass-card reveal">
+      <div class="calc-grid">
+        <div class="calc-left">
+          <h3 class="calc-title">1. Pilih Aplikasi Premium</h3>
+          <div class="calc-apps-list">
+            <!-- Netflix -->
+            <div class="calc-app-item selected" data-retail="186000" data-jajan="35000" data-name="Netflix Premium">
+              <div class="app-meta">
+                <div class="app-checkbox">
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                </div>
+                <span>Netflix Premium</span>
+              </div>
+              <span class="calc-app-price">Rp 35.000 / bln</span>
+            </div>
+            <!-- Canva Pro -->
+            <div class="calc-app-item selected" data-retail="95000" data-jajan="15000" data-name="Canva Pro">
+              <div class="app-meta">
+                <div class="app-checkbox">
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                </div>
+                <span>Canva Pro</span>
+              </div>
+              <span class="calc-app-price">Rp 15.000 / bln</span>
+            </div>
+            <!-- ChatGPT Plus -->
+            <div class="calc-app-item" data-retail="330000" data-jajan="49000" data-name="ChatGPT Plus">
+              <div class="app-meta">
+                <div class="app-checkbox">
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                </div>
+                <span>ChatGPT Plus</span>
+              </div>
+              <span class="calc-app-price">Rp 49.000 / bln</span>
+            </div>
+            <!-- Spotify Premium -->
+            <div class="calc-app-item" data-retail="55000" data-jajan="12000" data-name="Spotify Premium">
+              <div class="app-meta">
+                <div class="app-checkbox">
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                </div>
+                <span>Spotify Premium</span>
+              </div>
+              <span class="calc-app-price">Rp 12.000 / bln</span>
+            </div>
+            <!-- CapCut Pro -->
+            <div class="calc-app-item" data-retail="129000" data-jajan="25000" data-name="CapCut Pro">
+              <div class="app-meta">
+                <div class="app-checkbox">
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                </div>
+                <span>CapCut Pro</span>
+              </div>
+              <span class="calc-app-price">Rp 25.000 / bln</span>
+            </div>
+          </div>
+
+          <div class="duration-selector">
+            <div class="duration-label">
+              <span>2. Durasi Berlangganan:</span>
+              <span class="duration-value"><span id="durationVal">3</span> Bulan</span>
+            </div>
+            <div class="slider-container">
+              <input type="range" min="1" max="12" value="3" class="calc-slider" id="calcDuration">
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-right">
+          <div class="comparison-box">
+            <h3 class="calc-title" style="margin-bottom: 10px;">Estimasi Perbandingan</h3>
+            <div class="comp-row">
+              <span class="comp-label">Harga Retail Resmi</span>
+              <span class="comp-price retail" id="retailTotal">Rp 843.000</span>
+            </div>
+            <div class="comp-row">
+              <span class="comp-label">Harga Jajan Digital</span>
+              <span class="comp-price jajan" id="jajanTotal">Rp 150.000</span>
+            </div>
+          </div>
+
+          <div class="savings-box">
+            <h4 class="savings-title">Total Uang Yang Anda Hemat</h4>
+            <div class="savings-amount" id="savingsTotal">Rp 693.000</div>
+          </div>
+
+          <button class="btn btn-primary calc-cta-btn" id="calcCta">
+            <i data-lucide="whatsapp"></i> Pesan Paket Hemat Ini
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEUNGGULAN UTAMA -->
+  <section class="features-section container" id="keunggulan">
+    <div class="section-header reveal">
+      <div class="section-tag">
+        <span class="dot"></span>
+        <span>Keunggulan Utama</span>
+      </div>
+      <h2 class="section-title">Mengapa Memilih Kami?</h2>
+      <p class="section-subtitle">Kami berfokus menghadirkan kemudahan berlangganan dengan jaminan kenyamanan ekstra.</p>
+    </div>
+
+    <div class="features-grid">
+      <!-- Legalitas -->
+      <div class="feature-card glass-card reveal">
+        <div class="feature-icon-wrapper">
+          <i data-lucide="shield-check"></i>
+        </div>
+        <h3 class="feature-card-title">Legalitas & Keamanan</h3>
+        <p class="feature-card-desc">Semua layanan menggunakan sistem undangan tim resmi (invite member) atau akun legal yang dibuat sah demi kenyamanan Anda.</p>
+      </div>
+
+      <!-- Garansi -->
+      <div class="feature-card glass-card reveal reveal-delay-1">
+        <div class="feature-icon-wrapper">
+          <i data-lucide="check-square"></i>
+        </div>
+        <h3 class="feature-card-title">Garansi Penuh (Full Warranty)</h3>
+        <p class="feature-card-desc">Kami memberikan perlindungan garansi penuh selama masa aktif layanan, didukung oleh proses pemulihan akun yang sangat responsif.</p>
+      </div>
+
+      <!-- Kemudahan Pelayanan -->
+      <div class="feature-card glass-card reveal reveal-delay-2">
+        <div class="feature-icon-wrapper">
+          <i data-lucide="cpu"></i>
+        </div>
+        <h3 class="feature-card-title">Pelayanan Berbasis Teknologi</h3>
+        <p class="feature-card-desc">Didukung oleh otomatisasi sistem pelayanan dan metode pembayaran instan yang memproses kebutuhan Anda dengan cepat dan efisien.</p>
+      </div>
+
+      <!-- Pilihan Fleksibel -->
+      <div class="feature-card glass-card reveal reveal-delay-3">
+        <div class="feature-icon-wrapper">
+          <i data-lucide="users-2"></i>
+        </div>
+        <h3 class="feature-card-title">Pilihan Fleksibel</h3>
+        <p class="feature-card-desc">Tersedia berbagai opsi paket penggunaan yang disesuaikan dengan kebutuhan individu maupun kelompok dengan efisiensi biaya maksimal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPERASIONAL & KONTAK -->
+  <section class="contact-section container" id="kontak">
+    <div class="contact-box glass-card reveal">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <div class="section-tag">
+            <span class="dot"></span>
+            <span>Hubungi Kami</span>
+          </div>
+          <h2 class="contact-title">Mulai Kebutuhan Digital Anda Hari Ini</h2>
+          <p class="contact-desc">
+            Layanan pesan otomatis dibantu AI kami siap melayani respons awal Anda selama 24 jam penuh. Tim CS representatif kami aktif membantu pada jam kerja operasional.
+          </p>
+
+          <div class="contact-info-list">
+            <!-- Jam Operasional -->
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i data-lucide="clock"></i></div>
+              <div class="contact-info-text">
+                <h5>Jam Operasional CS</h5>
+                <p>Setiap Hari (Senin - Minggu) | 08:00 - 22:00 WIB</p>
+              </div>
+            </div>
+            <!-- WA Number -->
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i data-lucide="phone"></i></div>
+              <div class="contact-info-text">
+                <h5>WhatsApp Customer Service</h5>
+                <p><a href="https://wa.me/6285764985114" target="_blank">0857-6498-5114</a></p>
+              </div>
+            </div>
+            <!-- Email -->
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i data-lucide="mail"></i></div>
+              <div class="contact-info-text">
+                <h5>Email Resmi</h5>
+                <p>
+                  <a href="mailto:support@jajandigital.web.id">support@jajandigital.web.id</a><br>
+                  <a href="mailto:contact@jajandigital.web.id">contact@jajandigital.web.id</a>
+                </p>
+              </div>
+            </div>
+            <!-- WA Group -->
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i data-lucide="users"></i></div>
+              <div class="contact-info-text">
+                <h5>Grup WhatsApp Komunitas</h5>
+                <p><a href="https://chat.whatsapp.com/JDKrZ1bWtTb83unGAoTUh4" target="_blank">Hubungi Komunitas WA</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <div class="contact-ctas">
+            <a href="https://wa.me/6285764985114?text=Halo%20Jajan%20Digital,%20saya%20ingin%20bertanya%20mengenai%20layanan%20premium." target="_blank" class="btn btn-primary btn-whatsapp" id="waCtaBtn">
+              <i data-lucide="message-square"></i> Hubungi via WhatsApp Chat
+            </a>
+            <a href="https://chat.whatsapp.com/JDKrZ1bWtTb83unGAoTUh4" target="_blank" class="btn btn-secondary btn-wa-group">
+              <i data-lucide="users-2"></i> Gabung Grup Komunitas
+            </a>
+          </div>
+
+          <!-- Payment methods support -->
+          <div class="payments-container">
+            <h4 class="payments-title">Metode Pembayaran Instan</h4>
+            <div class="payment-icons">
+              <span class="payment-badge qris">QRIS</span>
+              <span class="payment-badge">GoPay</span>
+              <span class="payment-badge">OVO</span>
+              <span class="payment-badge">DANA</span>
+              <span class="payment-badge">BCA</span>
+              <span class="payment-badge">Mandiri</span>
+              <span class="payment-badge">BRI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <a href="#" class="nav-logo" style="margin-bottom: 10px;">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px;">
+            <path d="M 46,12 L 64,12 L 47,61 C 44,71 35,77 25,77 C 15,77 6,71 6,60 L 22,60 C 22,64 25,66 28,66 C 32,66 34,63 35,57 L 46,12 Z" fill="currentColor"/>
+            <path d="M 61,24 L 79,24 L 62,73 C 59,83 50,89 40,89 C 30,89 21,83 21,72 L 37,72 C 37,76 40,78 43,78 C 47,78 49,75 50,69 L 61,24 Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <span>Jajan<span class="gradient-text-alt">Digital</span></span>
+      </a>
+      <p class="footer-copy">
+        &copy; 2026 Jajan Digital Indonesia. Semua Hak Cipta Dilindungi.
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
