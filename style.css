@@ -57,6 +57,7 @@ html {
 body {
   font-family: var(--font-body);
   line-height: 1.6;
+  color: var(--text-main);
   position: relative;
   overflow-x: hidden;
 }
@@ -1615,7 +1616,6 @@ body.light-theme .contact-info-icon {
   background: rgba(15, 23, 42, 0.02);
   border-color: rgba(15, 23, 42, 0.06);
 }
-
 body.light-theme .payment-badge {
   background: rgba(15, 23, 42, 0.03);
   border-color: rgba(15, 23, 42, 0.05);
@@ -1626,6 +1626,16 @@ body.light-theme footer {
   border-top-color: rgba(15, 23, 42, 0.05);
 }
 
+body.light-theme .navbar {
+  background: var(--glass-bg);
+  border-color: var(--glass-border);
+  box-shadow: 0 10px 30px var(--glass-shadow);
+}
+
+body.light-theme .navbar.scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid var(--glass-border);
+}
 /* Theme Toggle Button Styling */
 .theme-toggle-btn {
   background: rgba(255, 255, 255, 0.05);
