@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chat JGL - Asisten AI Jajan Digital untuk membantu Anda menemukan aplikasi premium murah, aman, legal dan bergaransi resmi.">
+  <title>Chat JGL | Asisten AI Jajan Digital</title>
+  <link rel="stylesheet" href="chat.css?v=1.2">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- BACKGROUND GLOW SYSTEM -->
+  <div class="background-glow-container">
+    <div class="static-orb static-orb-1"></div>
+    <div class="static-orb static-orb-2"></div>
+    <div class="static-orb static-orb-3"></div>
+  </div>
+
+  <div id="chat-layout">
+    
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="chat-sidebar" id="chat-sidebar">
+      <div class="sidebar-header">
+        <a href="#" class="sidebar-logo">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px;">
+            <path d="M 46,12 L 64,12 L 47,61 C 44,71 35,77 25,77 C 15,77 6,71 6,60 L 22,60 C 22,64 25,66 28,66 C 32,66 34,63 35,57 L 46,12 Z" fill="currentColor"/>
+            <path d="M 61,24 L 79,24 L 62,73 C 59,83 50,89 40,89 C 30,89 21,83 21,72 L 37,72 C 37,76 40,78 43,78 C 47,78 49,75 50,69 L 61,24 Z" fill="currentColor"/>
+          </svg>
+          <span>Chat <span>JGL</span></span>
+        </a>
+        <a href="index.html" class="back-home-btn">
+          <i data-lucide="arrow-left"></i> Beranda
+        </a>
+      </div>
+
+      <button class="new-chat-btn" id="new-chat-btn">
+        <i data-lucide="plus"></i> Chat Baru
+      </button>
+
+      <!-- Chat History -->
+      <div class="history-section">
+        <span class="history-label">Riwayat Percakapan</span>
+        <div class="history-list" id="history-list">
+          <button class="history-item active" data-id="chat-1">
+            <i data-lucide="message-square"></i>
+            <span>Rekomendasi Akun Premium</span>
+          </button>
+          <button class="history-item" data-id="chat-2">
+            <i data-lucide="message-square"></i>
+            <span>Cara Pembayaran & Konfirmasi</span>
+          </button>
+          <button class="history-item" data-id="chat-3">
+            <i data-lucide="message-square"></i>
+            <span>Pertanyaan Klaim Garansi Akun</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- User Profile at Bottom -->
+      <div class="sidebar-footer">
+        <div class="user-avatar">JD</div>
+        <div class="user-info">
+          <span class="user-name">Pengunjung JGL</span>
+          <span class="user-role">Guest User</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CHAT PANEL -->
+    <main class="chat-main">
+      
+      <!-- HEADER BAR -->
+      <header class="chat-header">
+        <div class="header-model-info">
+          <button class="menu-toggle-btn" id="menu-toggle">
+            <i data-lucide="menu"></i>
+          </button>
+          <span class="model-name">JGL AI Assistant</span>
+          <span class="model-badge">PREMIUM</span>
+        </div>
+        <div class="header-actions">
+          <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Ganti Tema">
+            <i data-lucide="moon" class="theme-icon-moon"></i>
+            <i data-lucide="sun" class="theme-icon-sun"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- SCROLLABLE CHAT MESSAGES LOG -->
+      <div class="chat-scroller" id="chat-scroller">
+        <div class="chat-content-container" id="chat-content-container">
+          
+          <!-- WELCOME STATE / EMPTY SCREEN -->
+          <div class="chat-welcome-screen" id="welcome-screen">
+            <div class="welcome-logo-box">
+              JJ
+            </div>
+            <h2 class="welcome-title">Halo! Ada yang bisa saya bantu hari ini?</h2>
+            <p class="welcome-subtitle">Tanyakan apa saja seputar lisensi aplikasi premium murah, cara klaim garansi, atau pilih aplikasi terbaik kebutuhan Anda.</p>
+            
+            <!-- Quick Suggestions Grid -->
+            <div class="suggestions-grid">
+              <div class="suggestion-card" data-prompt="Apa saja rekomendasi aplikasi premium terlaris untuk produktivitas?">
+                <div class="suggestion-title">
+                  <i data-lucide="star"></i>
+                  <span>Aplikasi Terlaris</span>
+                </div>
+                <p class="suggestion-desc">Tanyakan rekomendasi aplikasi premium terbaik & terpopuler di Jajan Digital.</p>
+              </div>
+              <div class="suggestion-card" data-prompt="Bagaimana sistem garansi penuh (full warranty) bekerja?">
+                <div class="suggestion-title">
+                  <i data-lucide="shield"></i>
+                  <span>Sistem Garansi</span>
+                </div>
+                <p class="suggestion-desc">Penjelasan garansi penuh selama durasi langganan aktif.</p>
+              </div>
+              <div class="suggestion-card" data-prompt="Bagaimana proses aktivasi akun setelah saya melakukan transfer?">
+                <div class="suggestion-title">
+                  <i data-lucide="zap"></i>
+                  <span>Proses Aktivasi</span>
+                </div>
+                <p class="suggestion-desc">Cari tahu langkah instan pengaktifan akun premium Anda.</p>
+              </div>
+              <div class="suggestion-card" data-prompt="Saya ingin melakukan simulasi hemat belanja aplikasi bulanan saya.">
+                <div class="suggestion-title">
+                  <i data-lucide="calculator"></i>
+                  <span>Simulasi Hemat</span>
+                </div>
+                <p class="suggestion-desc">Hitung seberapa banyak penghematan langganan di JGL.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Chat Message Bubbles will render here via JS -->
+
+        </div>
+      </div>
+
+      <!-- FLOATING CHAT INPUT BAR AREA -->
+      <div class="chat-input-area">
+        <div class="chat-input-wrapper">
+          <div class="input-panel">
+            
+            <!-- Pre-sending Image Attachment Preview Box -->
+            <div class="input-preview-strip" id="preview-strip">
+              <div class="preview-thumb-box">
+                <img id="preview-image" src="" alt="Selected Attachment Preview">
+                <button type="button" class="remove-thumb-btn" id="remove-preview-btn">
+                  <i data-lucide="x"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Input Row -->
+            <div class="input-row">
+              <!-- Attachment Button -->
+              <button class="input-attach-btn" id="attach-btn" title="Lampirkan Gambar">
+                <i data-lucide="image"></i>
+              </button>
+              <!-- Hidden File Input for Image Import -->
+              <input type="file" id="file-input" accept="image/*" style="display: none;">
+
+              <!-- Chat Input Area (Textarea that auto-grows) -->
+              <textarea class="chat-textarea" id="chat-input" rows="1" placeholder="Tanyakan sesuatu ke JGL AI... (Bisa kirim gambar)"></textarea>
+
+              <!-- Send Button -->
+              <button class="input-send-btn" id="send-btn" title="Kirim Pesan" disabled>
+                <i data-lucide="arrow-up"></i>
+              </button>
+            </div>
+          </div>
+          <p class="chat-input-disclaimer">JGL AI Assistant dapat membuat kesalahan. Harap periksa info penting.</p>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>
