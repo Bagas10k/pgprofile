@@ -81,6 +81,9 @@
           <span class="model-badge">PREMIUM</span>
         </div>
         <div class="header-actions">
+          <button class="theme-toggle-btn" id="settingsToggleBtn" title="Pengaturan AI & Widget">
+            <i data-lucide="settings"></i>
+          </button>
           <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Ganti Tema">
             <i data-lucide="moon" class="theme-icon-moon"></i>
             <i data-lucide="sun" class="theme-icon-sun"></i>
@@ -177,6 +180,149 @@
 
     </main>
 
+  </div>
+
+  <!-- SETTINGS MODAL -->
+  <div class="settings-modal" id="settingsModal">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <h3><i data-lucide="settings"></i> OmniChat Engine Settings</h3>
+        <button class="close-modal-btn" id="closeModalBtn"><i data-lucide="x"></i></button>
+      </div>
+      
+      <div class="modal-tabs">
+        <button class="modal-tab-btn active" data-tab="tab-api">API Key Pool</button>
+        <button class="modal-tab-btn" data-tab="tab-triggers">Keyword Triggers</button>
+        <button class="modal-tab-btn" data-tab="tab-flows">Bot Settings & Flows</button>
+      </div>
+
+      <div class="modal-body">
+        
+        <!-- TAB 1: API KEY POOL -->
+        <div class="tab-panel active" id="tab-api">
+          <form id="add-api-form" class="modal-form">
+            <div class="form-group">
+              <label for="api-provider">AI Provider</label>
+              <select id="api-provider">
+                <option value="gemini">Google Gemini</option>
+                <option value="grok">xAI Grok</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="api-key">API Key</label>
+              <input type="password" id="api-key" placeholder="Masukkan API Key..." required>
+            </div>
+            <div class="form-group">
+              <label for="api-priority">Prioritas (1-10)</label>
+              <input type="number" id="api-priority" min="1" max="10" value="1" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="padding: 10px 16px;"><i data-lucide="plus"></i> Tambah Kunci</button>
+          </form>
+
+          <div class="table-container">
+            <table class="settings-table">
+              <thead>
+                <tr>
+                  <th>Provider</th>
+                  <th>API Key</th>
+                  <th>Prioritas</th>
+                  <th>Eror</th>
+                  <th>Status</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="api-pool-list">
+                <!-- Loaded dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TAB 2: KEYWORD TRIGGERS -->
+        <div class="tab-panel" id="tab-triggers">
+          <form id="add-trigger-form" class="modal-form">
+            <div class="form-group">
+              <label for="trigger-keyword">Kata Kunci (Koma untuk banyak)</label>
+              <input type="text" id="trigger-keyword" placeholder="Contoh: katalog, daftar hijab" required>
+            </div>
+            <div class="form-group" style="grid-column: span 2;">
+              <label for="trigger-response">Jawaban Instan (Teks/HTML)</label>
+              <textarea id="trigger-response" placeholder="Masukkan balasan teks yang akan langsung ditampilkan..." required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="trigger-btn1-label">Tombol 1 (Label)</label>
+              <input type="text" id="trigger-btn1-label" placeholder="Misal: Beli Sekarang">
+            </div>
+            <div class="form-group">
+              <label for="trigger-btn1-action">Tombol 1 (Aksi / Link)</label>
+              <input type="text" id="trigger-btn1-action" placeholder="flow:beli_langsung atau teks bebas">
+            </div>
+            <button type="submit" class="btn btn-primary" style="padding: 10px 16px; grid-column: span 2;"><i data-lucide="plus"></i> Tambah Trigger</button>
+          </form>
+
+          <div class="table-container">
+            <table class="settings-table">
+              <thead>
+                <tr>
+                  <th>Kata Kunci</th>
+                  <th>Teks Balasan</th>
+                  <th>Tombol Aksi</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="triggers-list">
+                <!-- Loaded dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TAB 3: BOT SETTINGS & FLOWS -->
+        <div class="tab-panel" id="tab-flows">
+          <div class="modal-form-vertical">
+            <div class="form-group-vertical">
+              <label for="system-instruction">System Instruction (Knowledge Base AI)</label>
+              <textarea id="system-instruction" rows="6" placeholder="Masukkan detail instruksi, profil toko, daftar harga, dan kepribadian AI..."></textarea>
+            </div>
+            
+            <h4 style="margin: 20px 0 10px 0; font-family: var(--font-title); font-size: 0.95rem; color: var(--text-main);">Konfigurasi Auto-Flow Pemesanan (Order Flow)</h4>
+            <div class="form-group-vertical">
+              <label>Langkah-Langkah Tanya-Jawab Beruntun:</label>
+              <div class="flow-steps-editor" id="flow-steps-editor">
+                <!-- Prepopulated steps editor -->
+              </div>
+            </div>
+
+            <h4 style="margin: 20px 0 10px 0; font-family: var(--font-title); font-size: 0.95rem; color: var(--text-main);">Tombol Follow-Up Otomatis AI</h4>
+            <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+              <div>
+                <label for="ai-btn1-label">Label Tombol 1</label>
+                <input type="text" id="ai-btn1-label" placeholder="Misal: Tanya Admin">
+              </div>
+              <div>
+                <label for="ai-btn1-action">Aksi Tombol 1</label>
+                <input type="text" id="ai-btn1-action" placeholder="Misal: hubungi admin">
+              </div>
+              <div>
+                <label for="ai-btn2-label">Label Tombol 2</label>
+                <input type="text" id="ai-btn2-label" placeholder="Misal: Beli Langsung">
+              </div>
+              <div>
+                <label for="ai-btn2-action">Aksi Tombol 2</label>
+                <input type="text" id="ai-btn2-action" placeholder="Misal: flow:beli_langsung">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="closeModalBtn2">Batal</button>
+        <button class="btn btn-primary" id="saveSettingsBtn"><i data-lucide="check"></i> Simpan Semua</button>
+      </div>
+    </div>
   </div>
 
   <script src="chat.js"></script>
